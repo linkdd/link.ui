@@ -1,0 +1,7 @@
+{
+    "$schema": "data://routing-key",
+    "title": "event routing key",
+    "description": "identify engines chain for the event",
+
+    "type": "string"
+}

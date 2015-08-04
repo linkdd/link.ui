@@ -1,0 +1,12 @@
+{
+    "$schema": "data://filter",
+    "title": "event filter",
+    "description": "contains task to execute to filter and mangle and event",
+
+    "type": "object",
+    "properties": {
+        "route": { "$ref": "data://routing-key" },
+        "message": { "$ref": "data://task" },
+        "task": { "$ref": "data://task" }
+    }
+}
