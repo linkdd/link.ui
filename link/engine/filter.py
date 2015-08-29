@@ -5,12 +5,12 @@ import re
 
 
 def event_processing(engine, message, route, **kwargs):
-    filters = engine['filters']
+    filters = engine['filters'].find()
 
-    for _filter in filters:
-        rkregex = re.compile(_filter['route'])
-        msgfilter = lookup(_filter['message'])
-        task = lookup(_filter['task'])
+    for filter in filters:
+        rkregex = re.compile(filter['route'])
+        msgfilter = lookup(filter['message'])
+        task = lookup(filter['task'])
 
         if rkregex.match(route) and msgfilter(message):
             result = task(message, route)

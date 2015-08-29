@@ -1,7 +1,0 @@
-{
-    "$schema": "data://task",
-    "title": "python task",
-    "description": "path to python callable object",
-
-    "type": "string"
-}

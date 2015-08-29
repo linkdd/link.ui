@@ -7,7 +7,7 @@ from link.middleware.base import Middleware
 
 
 CONF_PATH = 'middleware/registry.conf'
-CATEGORY = 'LINKEDMANAGER'
+CATEGORY = 'MIDDLEWARE_REGISTRY'
 
 
 class Middlewares(dict):

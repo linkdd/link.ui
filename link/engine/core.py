@@ -102,6 +102,7 @@ class Engine(MiddlewareRegistry):
             running = self.daemon_processing(self)
 
         thread.terminate()
+        thread.join()
 
         queue.disconnect()
 

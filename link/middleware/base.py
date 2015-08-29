@@ -37,6 +37,10 @@ class MetaMiddleware(MetaConfigurable):
         if self not in mset[self.__protocol__][self.__datatype__]:
             mset[self.__protocol__][self.__datatype__].append(self)
 
+        for base in bases:
+            if self not in mset[base.__protocol__][base.__datatype__]:
+                mset[base.__protocol__][base.__datatype__].append(self)
+
 
 @conf_paths(CONF_PATH)
 @add_category(CATEGORY, content=CONTENT)
