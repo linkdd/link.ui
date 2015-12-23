@@ -1,0 +1,2 @@
+    return require('link/core');
+}));

@@ -1,0 +1,9 @@
+{
+  "firebase": "linkdb",
+  "public": "link",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}

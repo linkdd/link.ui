@@ -1,0 +1,18 @@
+{
+    "routes": {
+        "#/": {
+            "model": ["test"],
+            "view": {
+                "widget": {
+                    "xtype": "box",
+                    "children": [{
+                        "xtype": "el",
+                        "tag": "p"
+                    }]
+                }
+            }
+        }
+    },
+    "refreshInterval": 300,
+    "container": "appcontainer"
+}

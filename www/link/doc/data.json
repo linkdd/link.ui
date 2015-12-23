@@ -1,0 +1,612 @@
+{
+    "project": {
+        "name": "link-webcore",
+        "description": "link webui framework",
+        "version": "0.0.1"
+    },
+    "files": {
+        "src/widgets/action.js": {
+            "name": "src/widgets/action.js",
+            "modules": {},
+            "classes": {
+                "ActionWidget": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/widgets/box.js": {
+            "name": "src/widgets/box.js",
+            "modules": {},
+            "classes": {
+                "BoxWidget": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/widgets/element.js": {
+            "name": "src/widgets/element.js",
+            "modules": {},
+            "classes": {
+                "ElementWidget": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/actionregistry.js": {
+            "name": "src/actionregistry.js",
+            "modules": {},
+            "classes": {
+                "ActionRegistry": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/app.js": {
+            "name": "src/app.js",
+            "modules": {},
+            "classes": {
+                "Application": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/controller.js": {
+            "name": "src/controller.js",
+            "modules": {},
+            "classes": {
+                "Controller": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/core.js": {
+            "name": "src/core.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/utils.js": {
+            "name": "src/utils.js",
+            "modules": {
+                "Link": 1
+            },
+            "classes": {
+                "Utils": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/view.js": {
+            "name": "src/view.js",
+            "modules": {},
+            "classes": {
+                "View": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/widget.js": {
+            "name": "src/widget.js",
+            "modules": {},
+            "classes": {
+                "Widget": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/widgetregistry.js": {
+            "name": "src/widgetregistry.js",
+            "modules": {},
+            "classes": {
+                "WidgetRegistry": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {
+        "Link": {
+            "name": "Link",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "ActionWidget": 1,
+                "BoxWidget": 1,
+                "ElementWidget": 1,
+                "ActionRegistry": 1,
+                "Application": 1,
+                "Controller": 1,
+                "Utils": 1,
+                "View": 1,
+                "Widget": 1,
+                "WidgetRegistry": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "main",
+            "file": "src/widgetregistry.js",
+            "line": 5,
+            "description": "Link utilities module.",
+            "itemtype": "main"
+        }
+    },
+    "classes": {
+        "ActionWidget": {
+            "name": "ActionWidget",
+            "shortname": "ActionWidget",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Link",
+            "file": "src/widgets/action.js",
+            "line": 7,
+            "description": "Trigger a named action on event.",
+            "extends": "ElementWidget"
+        },
+        "BoxWidget": {
+            "name": "BoxWidget",
+            "shortname": "BoxWidget",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Link",
+            "file": "src/widgets/box.js",
+            "line": 14,
+            "is_constructor": 1,
+            "description": "Contains multiple widgets.",
+            "extends": "Widget"
+        },
+        "ElementWidget": {
+            "name": "ElementWidget",
+            "shortname": "ElementWidget",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Link",
+            "file": "src/widgets/element.js",
+            "line": 5,
+            "description": "Basic element.",
+            "extends": "Widget"
+        },
+        "ActionRegistry": {
+            "name": "ActionRegistry",
+            "shortname": "ActionRegistry",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Link",
+            "file": "src/actionregistry.js",
+            "line": 5,
+            "description": "Manage actions loading and calling.",
+            "mainName": "Link",
+            "tag": "main",
+            "itemtype": "main",
+            "_main": true
+        },
+        "Application": {
+            "name": "Application",
+            "shortname": "Application",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Link",
+            "file": "src/app.js",
+            "line": 23,
+            "description": "Link main application.",
+            "mainName": "Link",
+            "tag": "main",
+            "itemtype": "main",
+            "_main": true,
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "config",
+                    "description": "- Application configuration.",
+                    "type": "Object"
+                }
+            ]
+        },
+        "Controller": {
+            "name": "Controller",
+            "shortname": "Controller",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Link",
+            "file": "src/controller.js",
+            "line": 13,
+            "description": "Control data request and rendering for an URL.",
+            "mainName": "Link",
+            "tag": "main",
+            "itemtype": "main",
+            "_main": true,
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "container",
+                    "description": "- DOM object containing view.",
+                    "type": "Object"
+                },
+                {
+                    "name": "config",
+                    "description": "- Controller config.",
+                    "type": "Object"
+                }
+            ]
+        },
+        "Utils": {
+            "name": "Utils",
+            "shortname": "Utils",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Link",
+            "namespace": "",
+            "file": "src/utils.js",
+            "line": 4,
+            "description": "Link utilities module.",
+            "mainName": "Link",
+            "tag": "main",
+            "itemtype": "main",
+            "_main": true
+        },
+        "View": {
+            "name": "View",
+            "shortname": "View",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Link",
+            "namespace": "",
+            "file": "src/view.js",
+            "line": 14,
+            "description": "Used to manage widget rendering",
+            "mainName": "Link",
+            "tag": "main",
+            "itemtype": "main",
+            "_main": true,
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "config",
+                    "description": "- View configuration.",
+                    "type": "Object"
+                }
+            ]
+        },
+        "Widget": {
+            "name": "Widget",
+            "shortname": "Widget",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Link",
+            "namespace": "",
+            "file": "src/widget.js",
+            "line": 12,
+            "description": "Widget base class.",
+            "mainName": "Link",
+            "tag": "main",
+            "itemtype": "main",
+            "_main": true,
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "config",
+                    "description": "- Widget configuration.",
+                    "type": "Object"
+                }
+            ]
+        },
+        "WidgetRegistry": {
+            "name": "WidgetRegistry",
+            "shortname": "WidgetRegistry",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Link",
+            "namespace": "",
+            "file": "src/widgetregistry.js",
+            "line": 5,
+            "description": "Manage widgets loading and instantiation.",
+            "mainName": "Link",
+            "tag": "main",
+            "itemtype": "main",
+            "_main": true
+        }
+    },
+    "elements": {},
+    "classitems": [
+        {
+            "file": "src/widgets/box.js",
+            "line": 34,
+            "description": "Render array of models into box widget.",
+            "itemtype": "method",
+            "name": "render",
+            "params": [
+                {
+                    "name": "model",
+                    "description": "- Models to render.",
+                    "type": "Array"
+                }
+            ],
+            "return": {
+                "description": "Promise resolved when all subwidgets are rendered.",
+                "type": "Promise"
+            },
+            "class": "BoxWidget"
+        },
+        {
+            "file": "src/widgets/element.js",
+            "line": 12,
+            "description": "Render text into the widget container.",
+            "itemtype": "method",
+            "name": "render",
+            "params": [
+                {
+                    "name": "model",
+                    "description": "- Text to render.",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "Promise that resolve instantly",
+                "type": "Promise"
+            },
+            "class": "ElementWidget"
+        },
+        {
+            "file": "src/actionregistry.js",
+            "line": 15,
+            "description": "Add a new action to the registry.",
+            "itemtype": "method",
+            "name": "add",
+            "static": 1,
+            "params": [
+                {
+                    "name": "name",
+                    "description": "- Action's name.",
+                    "type": "String"
+                },
+                {
+                    "name": "action",
+                    "description": "- Action or module URL.",
+                    "type": "String or function"
+                }
+            ],
+            "class": "ActionRegistry"
+        },
+        {
+            "file": "src/actionregistry.js",
+            "line": 39,
+            "description": "Used to ensure that every registered action has been loaded.",
+            "itemtype": "method",
+            "name": "ready",
+            "static": 1,
+            "return": {
+                "description": "Promise resolved when all actions are loaded.",
+                "type": "Promise"
+            },
+            "class": "ActionRegistry"
+        },
+        {
+            "file": "src/actionregistry.js",
+            "line": 56,
+            "description": "Utility to call actions.",
+            "itemtype": "method",
+            "name": "call",
+            "static": 1,
+            "params": [
+                {
+                    "name": "name",
+                    "description": "- Action's name.",
+                    "type": "String"
+                },
+                {
+                    "name": "args",
+                    "description": "- Action's arguments.",
+                    "type": "Array"
+                }
+            ],
+            "class": "ActionRegistry"
+        },
+        {
+            "file": "src/app.js",
+            "line": 46,
+            "description": "Initialize route controller, and load it.\nWhen controller is fully loaded, set ready state on application.",
+            "itemtype": "method",
+            "name": "route",
+            "params": [
+                {
+                    "name": "url",
+                    "description": "- Hash URL to go to.",
+                    "type": "String"
+                }
+            ],
+            "class": "Application"
+        },
+        {
+            "file": "src/app.js",
+            "line": 98,
+            "description": "Request current loaded controller to update.",
+            "itemtype": "method",
+            "name": "update",
+            "class": "Application"
+        },
+        {
+            "file": "src/app.js",
+            "line": 114,
+            "description": "Start listening for URL changes and update loop.",
+            "itemtype": "method",
+            "name": "start",
+            "class": "Application"
+        },
+        {
+            "file": "src/controller.js",
+            "line": 27,
+            "description": "Start loading controller model, and render it once view is loaded.",
+            "itemtype": "method",
+            "name": "load",
+            "return": {
+                "description": "Promise resolved when controller is loaded.",
+                "type": "Promise"
+            },
+            "class": "Controller"
+        },
+        {
+            "file": "src/controller.js",
+            "line": 69,
+            "description": "Render view and set its DOM element into the controller container.",
+            "itemtype": "method",
+            "name": "render",
+            "params": [
+                {
+                    "name": "model",
+                    "description": "- Data for to render in the view",
+                    "type": "Object"
+                }
+            ],
+            "class": "Controller"
+        },
+        {
+            "file": "src/utils.js",
+            "line": 14,
+            "description": "Generate new unique ID.",
+            "itemtype": "method",
+            "name": "generateId",
+            "static": 1,
+            "params": [
+                {
+                    "name": "prefix",
+                    "description": "- optional prefix for generated ID.",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "unique ID.",
+                "type": "String"
+            },
+            "class": "Utils",
+            "module": "Link"
+        },
+        {
+            "file": "src/view.js",
+            "line": 28,
+            "description": "Create new widget with model.",
+            "itemtype": "method",
+            "name": "render",
+            "params": [
+                {
+                    "name": "model",
+                    "description": "- Data to render in widget.",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "Promise resolved when DOM element is generated.",
+                "type": "Promise"
+            },
+            "class": "View",
+            "module": "Link"
+        },
+        {
+            "file": "src/widget.js",
+            "line": 30,
+            "description": "Render widget into its container.",
+            "itemtype": "method",
+            "name": "render",
+            "params": [
+                {
+                    "name": "model",
+                    "description": "- Data used for rendering.",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "Promise resolved when DOM element is generated.",
+                "type": "Promise"
+            },
+            "class": "Widget",
+            "module": "Link"
+        },
+        {
+            "file": "src/widgetregistry.js",
+            "line": 15,
+            "description": "Add a new widget class to the registry.",
+            "itemtype": "method",
+            "name": "add",
+            "static": 1,
+            "params": [
+                {
+                    "name": "name",
+                    "description": "- Widget's name.",
+                    "type": "String"
+                },
+                {
+                    "name": "widget",
+                    "description": "- Widget class or module URL.",
+                    "type": "String or Widget"
+                }
+            ],
+            "class": "WidgetRegistry",
+            "module": "Link"
+        },
+        {
+            "file": "src/widgetregistry.js",
+            "line": 39,
+            "description": "Used to ensure that every registered widget has been loaded.",
+            "itemtype": "method",
+            "name": "ready",
+            "static": 1,
+            "return": {
+                "description": "Promise resolved when all widgets are loaded.",
+                "type": "Promise"
+            },
+            "class": "WidgetRegistry",
+            "module": "Link"
+        },
+        {
+            "file": "src/widgetregistry.js",
+            "line": 56,
+            "description": "Utility to create new widgets.",
+            "itemtype": "method",
+            "name": "create",
+            "static": 1,
+            "params": [
+                {
+                    "name": "config",
+                    "description": "- Widget's configuration",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "A new widget.",
+                "type": "Widget"
+            },
+            "class": "WidgetRegistry",
+            "module": "Link"
+        }
+    ],
+    "warnings": []
+}

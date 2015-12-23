@@ -1,0 +1,181 @@
+{
+    "$schema": "/link-configuration#/",
+    "title": "LinkConfig",
+    "description": "Link Framework configuration schema",
+
+    "definitions": {
+        "app": {
+            "title": "ApplicationConfig",
+            "description": "Configuration used by Link.Application class",
+
+            "type": "object",
+            "properties": {
+                "routes": {
+                    "title": "ApplicationRoutes",
+                    "description": "Controller configuration for each URL",
+
+                    "type": "object",
+                    "patternProperties": {
+                        "*": {
+                            "$ref": "#/definitions/controller"
+                        }
+                    },
+
+                    "required": true
+                },
+                "refreshInterval": {
+                    "title": "PageRefreshInterval",
+                    "description": "Duration in seconds between to refresh",
+
+                    "type": "number",
+                    "minimum": 0,
+                    "required": false
+                },
+                "container": {
+                    "title": "ApplicationDOMContainer",
+                    "description": "DOMElement id containing the application",
+
+                    "type": "string",
+                    "required": false
+                }
+            }
+        },
+        "controller": {
+            "title": "ControllerConfig",
+            "description": "Configuration used by Link.Controller class or URL pointing to it",
+
+            "type": ["string", "object"],
+            "properties": {
+                "model": {
+                    "title": "ControllerModel",
+                    "description": "URL to data or statically defined",
+
+                    "type": ["string", "any"],
+                    "required": true
+                },
+                "view": {
+                    "$ref": "#/definitions/view",
+                    "required": true
+                }
+            }
+        },
+        "view": {
+            "title": "ViewConfig",
+            "description": "Configuration used by Link.View class or URL pointing to it",
+
+            "type": ["string", "object"],
+            "properties": {
+                "widget": {
+                    "$ref": "#/definitions/widget",
+                    "required": true
+                }
+            }
+        },
+        "widget": {
+            "title": "WidgetConfig",
+            "description": "Configuration used by Link.Widget",
+
+            "type": "object",
+            "properties": {
+                "xtype": {
+                    "title": "WidgetType",
+                    "description": "Widget class identifier in Link.WidgetRegistry",
+
+                    "type": "string",
+                    "required": true
+                },
+                "attr": {
+                    "title": "WidgetAttributes",
+                    "description": "DOMElement attributes",
+
+                    "type": "object",
+                    "required": false
+                },
+                "tag": {
+                    "title": "WidgetTag",
+                    "description": "DOMElement tag",
+
+                    "type": "string",
+                    "default": "div",
+                    "required": false
+                }
+            }
+        },
+        "widget-element": {
+            "title": "ElementWidgetConfig",
+            "description": "Specific configuration for widget ElementWidget",
+
+            "$ref": "#/definitions/widget",
+            "properties": {
+                "xtype": {
+                    "enum": ["el"]
+                }
+            }
+        },
+        "widget-box": {
+            "title": "BoxWidgetConfig",
+            "description": "Specific configuration for widget BoxWidget",
+
+            "$ref": "#/definitions/widget",
+            "properties": {
+                "xtype": {
+                    "enum": ["box"]
+                },
+                "children": {
+                    "title": "ChildrenWidgets",
+                    "description": "Widgets contained in this one",
+
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/widget"
+                    },
+                    "required": "true"
+                }
+            }
+        },
+        "widget-action": {
+            "title": "ActionWidgetConfig",
+            "description": "Specific configuration for widget ActionWidget",
+
+            "$ref": "#/definitions/widget",
+            "properties": {
+                "xtype": {
+                    "enum": ["action"]
+                },
+                "action": {
+                    "title": "Action",
+                    "description": "Action to execute",
+
+                    "type": "object",
+                    "properties": {
+                        "event": {
+                            "title": "JSEvent",
+                            "description": "DOM Event triggering the action",
+
+                            "type": "string",
+                            "required": true
+                        },
+                        "name": {
+                            "title": "ActionName",
+                            "description": "Name of the action in Link.ActionRegistry to trigger",
+
+                            "type": "string",
+                            "required": true
+                        },
+                        "args": {
+                            "title": "ActionArguments",
+                            "description": "Arguments to pass to the action",
+
+                            "type": "array",
+                            "items": {
+                                "type": "any"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+
+    "$ref": "#/definitions/app"
+}
