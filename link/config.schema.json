@@ -1,5 +1,5 @@
 {
-    "$schema": "/link-configuration#/",
+    "$schema": "http://json-schema.org/schema#/",
     "title": "LinkConfig",
     "description": "Link Framework configuration schema",
 
